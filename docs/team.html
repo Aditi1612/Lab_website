@@ -1,142 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team — EEMC Lab · Mizoram University</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-[#040810] text-white overflow-x-hidden">
+<body class="bg-[#f4f7fb] text-[#1a2333]">
 
-  <!-- NAV -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-black font-bold text-sm">E</div>
-        <span class="font-display font-bold text-white text-lg tracking-tight">EEMC Lab</span>
+        <div class="w-9 h-9 rounded-lg bg-[#1a3557] flex items-center justify-center"><span class="text-white font-bold text-sm font-display">E</span></div>
+        <div><div class="font-display font-bold text-[#1a3557] text-base leading-none">EEMC Lab</div><div class="text-[10px] text-[#64748b]">Mizoram University</div></div>
       </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html#research" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">Research</a>
-        <a href="team.html" class="text-sm font-medium text-cyan-400">Team</a>
-        <a href="index.html#about" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">About</a>
-        <a href="contact.html" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">Contact</a>
-        <a href="publications.html" class="px-4 py-2 rounded-full border border-cyan-400/40 text-cyan-400 text-sm font-medium hover:bg-cyan-400/10 transition-all">Publications</a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html#research" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Research</a>
+        <a href="team.html" class="text-sm font-medium text-[#2563eb] font-semibold">Team</a>
+        <a href="gallery.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Gallery</a>
+        <a href="publications.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Publications</a>
+        <a href="contact.html" class="px-4 py-2 rounded-lg bg-[#1a3557] text-white text-sm font-medium hover:bg-[#2563eb] transition-colors">Contact Us</a>
       </div>
     </div>
   </nav>
 
   <!-- PAGE HEADER -->
-  <section class="pt-36 pb-16 relative">
-    <div class="absolute inset-0">
-      <div class="orb orb-1" style="opacity:0.08"></div>
-      <div class="orb orb-2" style="opacity:0.06"></div>
+  <section class="hero-bg pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <span class="inline-block px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-4">Our People</span>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-3">Research Team</h1>
+      <p class="text-white/60 max-w-xl mx-auto text-sm">Meet the researchers advancing environmental chemistry and sustainable water treatment at Mizoram University.</p>
     </div>
-    <div class="absolute inset-0 grid-bg opacity-10"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-      <div class="inline-block px-3 py-1 rounded-full bg-teal-400/10 text-teal-400 text-xs font-medium mb-5 border border-teal-400/20">Our People</div>
-      <h1 class="font-display text-5xl md:text-6xl font-bold text-white mb-4">The Research Team</h1>
-      <p class="text-white/40 text-lg max-w-2xl mx-auto">Meet the brilliant researchers driving innovation in environmental chemistry and sustainable water treatment at Mizoram University.</p>
+    <div class="absolute bottom-0 left-0 right-0 relative">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40L1440 40L1440 0C1200 30 900 40 720 38C540 36 240 20 0 0L0 40Z" fill="#f4f7fb"/>
+      </svg>
     </div>
   </section>
 
-  <!-- PI FEATURED -->
-  <section class="pb-20">
+  <!-- PI SECTION -->
+  <section class="py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="reveal glass-card rounded-3xl border border-white/5 overflow-hidden mb-5">
-        <div class="grid md:grid-cols-3 gap-0">
-          <div class="col-span-1 p-10 flex flex-col items-center justify-center bg-gradient-to-br from-cyan-950/40 to-teal-950/20 border-r border-white/5">
-            <div class="w-28 h-28 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-4xl font-bold text-black font-display shadow-xl shadow-cyan-500/20 mb-5">
-              DT
+      <div class="reveal mb-6"><span class="section-label">Principal Investigator</span></div>
+      <div class="reveal card overflow-hidden mb-4">
+        <div class="grid md:grid-cols-3">
+          <!-- Photo side -->
+          <div class="bg-gradient-to-br from-[#e8eef8] to-[#f4f7fb] p-10 flex flex-col items-center justify-center border-r border-[#dde3ee]">
+            <div class="relative mb-5">
+              <img src="images/member_diwakar_tiwari.jpg" alt="Dr. Diwakar Tiwari" class="member-photo-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+              <div class="avatar-initials-lg bg-gradient-to-br from-[#1a3557] to-[#2563eb]" style="display:none">DT</div>
             </div>
             <div class="text-center">
-              <div class="text-white font-semibold text-lg font-display">Dr. Diwakar Tiwari</div>
-              <div class="text-cyan-400 text-sm mt-1">Principal Investigator</div>
-              <div class="text-white/30 text-xs mt-0.5">Senior Professor</div>
-              <div class="flex justify-center gap-2 mt-5">
-                <span class="role-badge bg-cyan-400/10 text-cyan-400 border-cyan-400/20">PI</span>
-                <span class="role-badge bg-teal-400/10 text-teal-400 border-teal-400/20">Director, DIA-COE</span>
+              <div class="font-display font-bold text-[#1a3557] text-lg">Dr. Diwakar Tiwari</div>
+              <div class="text-[#2563eb] text-sm mt-1">Principal Investigator</div>
+              <div class="text-[#64748b] text-xs mt-0.5">Senior Professor</div>
+              <div class="flex justify-center gap-2 mt-4">
+                <span class="tag tag-blue">PI</span>
+                <span class="tag tag-teal">DIA-COE Director</span>
               </div>
             </div>
           </div>
+          <!-- Info side -->
           <div class="col-span-2 p-10">
+            <h3 class="font-display text-xl font-bold text-[#1a3557] mb-1">About the Principal Investigator</h3>
+            <p class="text-[#64748b] text-sm leading-relaxed mb-6">Dr. Diwakar Tiwari is a Senior Professor at the Department of Chemistry, Mizoram University. He is Director of the DRDO-Industry-Academia Centre of Excellence (DIA-COE) and the Internal Quality Assurance Cell (IQAC). His research group works at the interface of environmental chemistry, materials science, and electrochemistry.</p>
             <div class="mb-6">
-              <h3 class="font-display text-2xl font-bold text-white mb-2">About the PI</h3>
-              <p class="text-white/50 text-sm leading-relaxed">
-                Dr. Diwakar Tiwari is a Senior Professor in the Department of Chemistry at Mizoram University, Aizawl. He is the Director of the DRDO-Industry-Academia-Centre of Excellence (DIA-COE) and Director of the Internal Quality Assurance Cell (IQAC).
-              </p>
-            </div>
-            <div class="mb-6">
-              <div class="text-white/30 text-xs font-medium uppercase tracking-wider mb-3">Research Interests</div>
+              <div class="text-[#64748b] text-xs font-semibold uppercase tracking-wider mb-3">Research Interests</div>
               <div class="flex flex-wrap gap-2">
                 <span class="tag">Advanced Oxidation Processes</span>
-                <span class="tag">Fenton-like Processes</span>
-                <span class="tag">Hybrid Clay Materials</span>
+                <span class="tag">Fenton-like Catalysis</span>
+                <span class="tag">Organo-clay Composites</span>
                 <span class="tag">Electrochemical Sensors</span>
-                <span class="tag">Wastewater Treatment</span>
                 <span class="tag">Heavy Metal Detection</span>
+                <span class="tag">Wastewater Treatment</span>
               </div>
             </div>
             <div class="grid sm:grid-cols-2 gap-3">
-              <div class="glass-sm rounded-xl p-3 border border-white/5">
-                <div class="text-white/30 text-xs mb-1">Email</div>
-                <div class="text-cyan-400 text-sm">diw_tiwari@yahoo.com</div>
+              <div class="bg-[#f4f7fb] rounded-xl p-3 border border-[#dde3ee]">
+                <div class="text-[#64748b] text-xs mb-0.5">Email</div>
+                <a href="mailto:diw_tiwari@yahoo.com" class="text-[#2563eb] text-sm hover:underline">diw_tiwari@yahoo.com</a>
               </div>
-              <div class="glass-sm rounded-xl p-3 border border-white/5">
-                <div class="text-white/30 text-xs mb-1">Phone</div>
-                <div class="text-white text-sm">+91-9862323015</div>
+              <div class="bg-[#f4f7fb] rounded-xl p-3 border border-[#dde3ee]">
+                <div class="text-[#64748b] text-xs mb-0.5">Phone</div>
+                <div class="text-[#1a2333] text-sm">+91-9862323015</div>
               </div>
-              <div class="glass-sm rounded-xl p-3 border border-white/5">
-                <div class="text-white/30 text-xs mb-1">Location</div>
-                <div class="text-white text-sm">Mizoram University, Aizawl-796004</div>
+              <div class="bg-[#f4f7fb] rounded-xl p-3 border border-[#dde3ee]">
+                <div class="text-[#64748b] text-xs mb-0.5">Fax</div>
+                <div class="text-[#1a2333] text-sm">+91-389-2330834</div>
               </div>
-              <div class="glass-sm rounded-xl p-3 border border-white/5">
-                <div class="text-white/30 text-xs mb-1">Fax</div>
-                <div class="text-white text-sm">+91-389-2330834</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- POST-DOC -->
-  <section class="pb-10">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="reveal mb-8">
-        <div class="inline-block px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 text-xs font-medium border border-cyan-400/20">Post-Doctoral Researcher</div>
-      </div>
-      <div class="reveal">
-        <div class="member-card glass-card rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-500 overflow-hidden">
-          <div class="grid md:grid-cols-4">
-            <div class="p-8 flex flex-col items-center justify-center bg-gradient-to-br from-cyan-950/20 to-transparent border-r border-white/5">
-              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-2xl font-bold text-black font-display mb-4 shadow-lg shadow-cyan-500/15">ML</div>
-              <div class="text-center">
-                <div class="text-white font-semibold text-sm font-display">Dr. Melody Lalhruaitluangi</div>
-                <div class="text-cyan-400 text-xs mt-1">Post-Doctoral Researcher</div>
-                <div class="text-white/30 text-xs">Organic Chemistry</div>
-              </div>
-            </div>
-            <div class="col-span-3 p-8">
-              <div class="mb-4">
-                <div class="text-white/30 text-xs uppercase tracking-wider mb-2">Ph.D. Thesis</div>
-                <p class="text-white/70 text-sm">Nanocomposite materials in the development of electrochemical sensors for pharmaceuticals and heavy metal ions.</p>
-              </div>
-              <div class="mb-4">
-                <div class="text-white/30 text-xs uppercase tracking-wider mb-2">Research Interests</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="tag">Multifunctional Catalysts</span>
-                  <span class="tag">Electrochemical Sensors</span>
-                  <span class="tag">Photo-Fenton-like Process</span>
-                  <span class="tag">Ecotoxicity Evaluation</span>
-                  <span class="tag">Trace Heavy Metals</span>
-                </div>
-              </div>
-              <div class="flex gap-4 text-xs text-white/30">
-                <span>📧 melodyhruaii01@gmail.com</span>
-                <span>📞 +91-8787810179</span>
+              <div class="bg-[#f4f7fb] rounded-xl p-3 border border-[#dde3ee]">
+                <div class="text-[#64748b] text-xs mb-0.5">Institution</div>
+                <div class="text-[#1a2333] text-sm">Mizoram University, Aizawl-796004</div>
               </div>
             </div>
           </div>
@@ -145,217 +102,210 @@
     </div>
   </section>
 
-  <!-- PHD SCHOLARS -->
-  <section class="pb-32">
+  <!-- POST DOC -->
+  <section class="pb-8">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="reveal mb-8 mt-8">
-        <div class="inline-block px-3 py-1 rounded-full bg-teal-400/10 text-teal-400 text-xs font-medium border border-teal-400/20">PhD Scholars</div>
+      <div class="reveal mb-5"><span class="section-label">Post-Doctoral Researcher</span></div>
+      <div class="reveal card overflow-hidden">
+        <div class="grid md:grid-cols-4">
+          <div class="bg-[#f0f9ff] p-8 flex flex-col items-center justify-center border-r border-[#dde3ee]">
+            <img src="images/member_melody.jpg" alt="Dr. Melody" class="member-photo-lg mb-4" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+            <div class="avatar-initials-lg bg-gradient-to-br from-cyan-500 to-teal-600 mb-4" style="display:none">ML</div>
+            <div class="text-center">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Dr. Melody Lalhruaitluangi</div>
+              <div class="text-[#0d9488] text-xs mt-1">Post-Doctoral Researcher</div>
+              <div class="text-[#64748b] text-xs">Organic Chemistry</div>
+            </div>
+          </div>
+          <div class="col-span-3 p-8">
+            <div class="mb-4">
+              <div class="text-[#64748b] text-xs font-semibold uppercase tracking-wider mb-2">Ph.D. Thesis</div>
+              <p class="text-[#1a2333] text-sm">Nanocomposite materials in the development of electrochemical sensors for pharmaceuticals and heavy metal ions.</p>
+            </div>
+            <div class="mb-4">
+              <div class="text-[#64748b] text-xs font-semibold uppercase tracking-wider mb-2">Research Interests</div>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag">Multifunctional Catalysts</span>
+                <span class="tag tag-teal">Electrochemical Sensors</span>
+                <span class="tag tag-sky">Photo-Fenton</span>
+                <span class="tag tag-violet">Ecotoxicity Evaluation</span>
+              </div>
+            </div>
+            <div class="text-[#64748b] text-xs">📧 melodyhruaii01@gmail.com &nbsp;·&nbsp; 📞 +91-8787810179</div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
+  <!-- PhD SCHOLARS -->
+  <section class="py-8 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="reveal mb-6 mt-4"><span class="section-label">PhD Scholars</span></div>
       <div class="grid md:grid-cols-2 gap-5" id="phd-grid">
 
+        <!-- Helper macro: each card follows same pattern -->
+
         <!-- Lalruatkima Ralte -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-teal-400/20 transition-all duration-500 p-7 group">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">LR</div>
-            <div>
-              <div class="text-white font-semibold font-display">Mr. Lalruatkima Ralte</div>
-              <div class="text-teal-400 text-xs mt-0.5">Physical Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f0fdf4]">
+              <img src="images/member_lalruatkima.jpg" alt="Lalruatkima" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-teal-600 font-display\'>LR</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Mr. Lalruatkima Ralte</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Physical Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Photo-Fenton-like process in the removal of emerging water contaminants using highly efficient bimetallic nanocatalysts.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-teal">Bimetallic Catalysts</span><span class="tag tag-teal">PET Upcycling</span><span class="tag tag-teal">Ecotoxicology</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 ruatkimamzu@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Photo-Fenton-like process in the removal of emerging water contaminants using highly efficient bimetallic nanocatalysts.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-teal">Bimetallic Nanocatalysts</span>
-            <span class="tag tag-teal">PET Upcycling</span>
-            <span class="tag tag-teal">Ecotoxicology</span>
-            <span class="tag tag-teal">Heterojunction Synthesis</span>
-          </div>
-          <div class="text-xs text-white/30">📧 ruatkimamzu@gmail.com</div>
         </div>
 
         <!-- Hmingsangzuali -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-violet-400/20 transition-all duration-500 p-7 group" style="--delay:0.07s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">HZ</div>
-            <div>
-              <div class="text-white font-semibold font-display">Ms. Hmingsangzuali</div>
-              <div class="text-violet-400 text-xs mt-0.5">Physical Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.06s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f5f3ff]">
+              <img src="images/member_hmingsangzuali.jpg" alt="Hmingsangzuali" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-violet-600 font-display\'>HZ</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Ms. Hmingsangzuali</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Physical Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Carbon nanotube-polymer supported noble metal nanoparticles for electrochemical sensing of pharmaceuticals and heavy metals.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-violet">CNT-Polymer</span><span class="tag tag-violet">Pharmaceutical Sensing</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 sangsralte08@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Carbon nanotube-polymer supported noble metal nanoparticles in the development of electrochemical sensors for pharmaceuticals and heavy metals in aqueous solution.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-violet">CNT-Polymer Composites</span>
-            <span class="tag tag-violet">Pharmaceutical Sensing</span>
-            <span class="tag tag-violet">Heavy Metals</span>
-            <span class="tag tag-violet">Noble Metal NPs</span>
-          </div>
-          <div class="text-xs text-white/30">📧 sangsralte08@gmail.com</div>
         </div>
 
         <!-- Vanhmingliana -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-emerald-400/20 transition-all duration-500 p-7 group" style="--delay:0.07s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">VN</div>
-            <div>
-              <div class="text-white font-semibold font-display">Mr. Vanhmingliana</div>
-              <div class="text-emerald-400 text-xs mt-0.5">Inorganic Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.06s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f0fdf4]">
+              <img src="images/member_vanhmingliana.jpg" alt="Vanhmingliana" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-emerald-600 font-display\'>VN</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Mr. Vanhmingliana</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Inorganic Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Noble metal decorated WO₃/TiO₂ photocatalyst for degradation of pharmaceuticals under visible and UV light.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-green">WO₃/TiO₂</span><span class="tag tag-green">S-scheme</span><span class="tag tag-green">Solar</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 teteapautu22@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Novel nanocatalyst in the photocatalytic degradation of pharmaceuticals using noble metal decorated WO₃/TiO₂ photocatalyst.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-emerald">WO₃/TiO₂ Photocatalysis</span>
-            <span class="tag tag-emerald">S-scheme Systems</span>
-            <span class="tag tag-emerald">Band-gap Modulation</span>
-            <span class="tag tag-emerald">UV &amp; Solar</span>
-          </div>
-          <div class="text-xs text-white/30">📧 teteapautu22@gmail.com</div>
         </div>
 
         <!-- Barsha Rabha -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-rose-400/20 transition-all duration-500 p-7 group" style="--delay:0.14s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">BR</div>
-            <div>
-              <div class="text-white font-semibold font-display">Ms. Barsha Rabha</div>
-              <div class="text-rose-400 text-xs mt-0.5">Inorganic Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.12s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#fff0f6]">
+              <img src="images/member_barsha.jpg" alt="Barsha" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-rose-500 font-display\'>BR</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Ms. Barsha Rabha</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Inorganic Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Graphene oxide supported bimetallic heterojunction nanocatalyst for Photo-Fenton-like removal of micropollutants.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-rose">Graphene Oxide</span><span class="tag tag-rose">Fenton Catalysis</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 barsharabha.0808@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Graphene oxide supported bimetallic heterojunction nanocatalyst in the removal of emerging micro-pollutants via Photo-Fenton-like processes.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag" style="background:rgba(251,113,133,0.08);border-color:rgba(251,113,133,0.2);color:rgba(251,113,133,0.9)">Graphene Oxide</span>
-            <span class="tag" style="background:rgba(251,113,133,0.08);border-color:rgba(251,113,133,0.2);color:rgba(251,113,133,0.9)">Fenton Catalysis</span>
-            <span class="tag" style="background:rgba(251,113,133,0.08);border-color:rgba(251,113,133,0.2);color:rgba(251,113,133,0.9)">Micropollutant Removal</span>
-          </div>
-          <div class="text-xs text-white/30">📧 barsharabha.0808@gmail.com</div>
         </div>
 
-        <!-- J. Malsawmsanga -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-amber-400/20 transition-all duration-500 p-7 group" style="--delay:0.07s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">JM</div>
-            <div>
-              <div class="text-white font-semibold font-display">Mr. J. Malsawmsanga</div>
-              <div class="text-amber-400 text-xs mt-0.5">Organic Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <!-- Malsawmsanga -->
+        <div class="reveal card overflow-hidden" style="--delay:0.06s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#fffbeb]">
+              <img src="images/member_malsawmsanga.jpg" alt="Malsawmsanga" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-amber-600 font-display\'>JM</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Mr. J. Malsawmsanga</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Organic Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Noble metal decorated TiO₂/GO heterojunction thin films for photocatalytic degradation and solar water purification.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-amber">Thin Films</span><span class="tag tag-amber">TiO₂/GO</span><span class="tag tag-amber">Solar</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 jmalsawmsanga82@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Noble metal decorated TiO₂/graphene oxide heterojunction nanocomposite thin films in the photocatalytic degradation of micro-pollutants.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag" style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);color:rgba(251,191,36,0.9)">Thin Film Fabrication</span>
-            <span class="tag" style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);color:rgba(251,191,36,0.9)">Solar Purification</span>
-            <span class="tag" style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.2);color:rgba(251,191,36,0.9)">TiO₂/GO</span>
-          </div>
-          <div class="text-xs text-white/30">📧 jmalsawmsanga82@gmail.com</div>
         </div>
 
         <!-- Laldintluangi Khiangte -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-500 p-7 group" style="--delay:0.14s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-400 to-sky-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">LK</div>
-            <div>
-              <div class="text-white font-semibold font-display">Ms. Laldintluangi Khiangte</div>
-              <div class="text-cyan-400 text-xs mt-0.5">Physical Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.12s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f0f9ff]">
+              <img src="images/member_laldintluangi.jpg" alt="Laldintluangi" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-sky-600 font-display\'>LK</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Ms. Laldintluangi Khiangte</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Physical Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Heterojunction nano-catalyst functionalized ionic liquid for efficient micropollutant degradation via AOPs.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-sky">Ionic Liquid</span><span class="tag tag-sky">Fenton AOPs</span><span class="tag tag-sky">Heterojunction</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 dintluangi2001@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Efficient degradation of micropollutants using heterojunction nano-catalyst functionalized ionic liquid.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag">Ionic Liquid Catalysis</span>
-            <span class="tag">Fenton-like AOPs</span>
-            <span class="tag">Heterojunction Nanostructures</span>
-          </div>
-          <div class="text-xs text-white/30">📧 dintluangi2001@gmail.com</div>
         </div>
 
         <!-- Bichumo N. Lotha -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-teal-400/20 transition-all duration-500 p-7 group" style="--delay:0.07s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-400 to-cyan-600 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">BL</div>
-            <div>
-              <div class="text-white font-semibold font-display">Mr. Bichumo N. Lotha</div>
-              <div class="text-teal-400 text-xs mt-0.5">Organic Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.06s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f0fdfa]">
+              <img src="images/member_bichumo.jpg" alt="Bichumo" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-teal-600 font-display\'>BL</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Mr. Bichumo N. Lotha</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Organic Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Novel polymer-based composite membrane for nanofiltration of micropollutants from aqueous medium.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-teal">Nanofiltration</span><span class="tag tag-teal">Polymer Membranes</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 bichumonaga@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Novel polymer based composite membrane for nanofiltration of micropollutants from aqueous medium.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-teal">Nanofiltration Membranes</span>
-            <span class="tag tag-teal">Mixed-Matrix Membranes</span>
-            <span class="tag tag-teal">Polymer-TiO₂ Composite</span>
-            <span class="tag tag-teal">Reactive Membranes</span>
-          </div>
-          <div class="text-xs text-white/30">📧 bichumonaga@gmail.com</div>
         </div>
 
         <!-- Laltlansangi -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-violet-400/20 transition-all duration-500 p-7 group" style="--delay:0.14s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-400 to-indigo-500 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">LT</div>
-            <div>
-              <div class="text-white font-semibold font-display">Ms. Laltlansangi</div>
-              <div class="text-violet-400 text-xs mt-0.5">Analytical Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden" style="--delay:0.12s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f5f3ff]">
+              <img src="images/member_laltlansangi.jpg" alt="Laltlansangi" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-violet-600 font-display\'>LT</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Ms. Laltlansangi</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Analytical Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Photocatalytic degradation of water-soluble polymers using metal oxide incorporated carbon dots.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-violet">Carbon Dots</span><span class="tag tag-violet">WSP Degradation</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 tlansangi.ralte@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Photocatalytic degradation of water-soluble polymers using metal oxide incorporated carbon dots.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-violet">Carbon Dots</span>
-            <span class="tag tag-violet">Water-Soluble Polymers</span>
-            <span class="tag tag-violet">Green Synthesis</span>
-            <span class="tag tag-violet">Metal Oxide Co-catalysts</span>
-          </div>
-          <div class="text-xs text-white/30">📧 tlansangi.ralte@gmail.com</div>
         </div>
 
         <!-- Thomas Hau Sian Muang -->
-        <div class="reveal member-card glass-card rounded-2xl border border-white/5 hover:border-emerald-400/20 transition-all duration-500 p-7 group" style="--delay:0.07s">
-          <div class="flex items-start gap-5 mb-5">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-xl font-bold text-black font-display shadow-lg flex-shrink-0">TH</div>
-            <div>
-              <div class="text-white font-semibold font-display">Mr. Thomas Hau Sian Muang</div>
-              <div class="text-emerald-400 text-xs mt-0.5">Physical Chemistry</div>
-              <div class="text-white/30 text-xs">PhD Scholar</div>
+        <div class="reveal card overflow-hidden md:col-span-2" style="--delay:0.06s">
+          <div class="flex">
+            <div class="w-28 flex-shrink-0 bg-[#f0fdf4]">
+              <img src="images/member_thomas.jpg" alt="Thomas" class="w-full h-full object-cover object-top" style="min-height:160px" onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<div class=\'text-2xl font-bold text-emerald-600 font-display\'>TH</div>'"/>
+            </div>
+            <div class="p-5 flex-1">
+              <div class="font-display font-semibold text-[#1a3557] text-sm">Mr. Thomas Hau Sian Muang</div>
+              <div class="text-[#2563eb] text-xs mt-0.5">PhD Scholar · Physical Chemistry</div>
+              <div class="text-[#64748b] text-xs mt-3 mb-3 leading-relaxed">Persulfate activation for efficient elimination of micropollutants using bimetallic metal-organic frameworks. Research focuses on MOF design, AOP mechanisms, and catalytic degradation kinetics.</div>
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="tag tag-green">Metal-Organic Frameworks</span><span class="tag tag-green">Persulfate Activation</span><span class="tag tag-green">Advanced Oxidation</span><span class="tag tag-green">Mechanistic Studies</span>
+              </div>
+              <div class="text-[#64748b] text-xs">📧 thomasnaulak12@gmail.com</div>
             </div>
           </div>
-          <div class="pub-card mb-4">
-            <div class="text-white/30 text-xs uppercase tracking-wider mb-1.5">Thesis</div>
-            <p class="text-white/60 text-xs leading-relaxed">Persulfate activation for efficient elimination of micropollutants using bimetallic metal-organic frameworks.</p>
-          </div>
-          <div class="flex flex-wrap gap-1.5 mb-4">
-            <span class="tag tag-emerald">Metal-Organic Frameworks</span>
-            <span class="tag tag-emerald">Persulfate Activation</span>
-            <span class="tag tag-emerald">Advanced Oxidation</span>
-            <span class="tag tag-emerald">Mechanistic Studies</span>
-          </div>
-          <div class="text-xs text-white/30">📧 thomasnaulak12@gmail.com</div>
         </div>
 
       </div>
@@ -363,30 +313,21 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+  <footer class="bg-[#0f2340] text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-black font-bold text-xs">E</div>
-        <div>
-          <div class="text-white font-semibold text-sm">EEMC Lab</div>
-          <div class="text-white/30 text-xs">Mizoram University · Aizawl, India</div>
-        </div>
+        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center font-bold font-display text-sm">E</div>
+        <div><div class="font-display font-bold text-sm">EEMC Lab</div><div class="text-white/40 text-xs">Mizoram University · Aizawl, India</div></div>
       </div>
-      <div class="text-white/20 text-xs">© 2025 EEMC Lab. Mizoram University.</div>
+      <div class="text-white/30 text-xs">© 2025 EEMC Lab, Mizoram University.</div>
     </div>
   </footer>
 
-  <style>
-    .role-badge {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      font-size: 11px;
-      font-weight: 500;
-      border: 1px solid;
-    }
-    .member-card:hover { transform: translateY(-2px); }
-  </style>
-  <script src="main.js" type="module"></script>
+  <script type="module">
+    import { inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+    document.querySelectorAll('.reveal').forEach(el => inView(el, () => el.classList.add('visible'), { margin: "-50px" }));
+  </script>
 </body>
 </html>

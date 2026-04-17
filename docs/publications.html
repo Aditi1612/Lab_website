@@ -1,323 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications — EEMC Lab · Mizoram University</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-[#040810] text-white overflow-x-hidden">
+<body class="bg-[#f4f7fb] text-[#1a2333]">
 
-  <!-- NAV -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-black font-bold text-sm">E</div>
-        <span class="font-display font-bold text-white text-lg tracking-tight">EEMC Lab</span>
+        <div class="w-9 h-9 rounded-lg bg-[#1a3557] flex items-center justify-center"><span class="text-white font-bold text-sm font-display">E</span></div>
+        <div><div class="font-display font-bold text-[#1a3557] text-base leading-none">EEMC Lab</div><div class="text-[10px] text-[#64748b]">Mizoram University</div></div>
       </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html#research" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">Research</a>
-        <a href="team.html" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">Team</a>
-        <a href="index.html#about" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">About</a>
-        <a href="contact.html" class="text-sm font-medium text-white/60 hover:text-cyan-400 transition-colors">Contact</a>
-        <a href="publications.html" class="px-4 py-2 rounded-full border border-cyan-400/40 text-cyan-400 text-sm font-medium bg-cyan-400/10">Publications</a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html#research" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb]">Research</a>
+        <a href="team.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb]">Team</a>
+        <a href="gallery.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb]">Gallery</a>
+        <a href="publications.html" class="text-sm font-medium text-[#2563eb] font-semibold">Publications</a>
+        <a href="contact.html" class="px-4 py-2 rounded-lg bg-[#1a3557] text-white text-sm font-medium hover:bg-[#2563eb] transition-colors">Contact Us</a>
       </div>
     </div>
   </nav>
 
   <!-- HEADER -->
-  <section class="pt-36 pb-16 relative">
-    <div class="absolute inset-0">
-      <div class="orb orb-1" style="opacity:0.07"></div>
-      <div class="orb orb-3" style="opacity:0.06"></div>
-    </div>
-    <div class="absolute inset-0 grid-bg opacity-10"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-      <div class="inline-block px-3 py-1 rounded-full bg-violet-400/10 text-violet-400 text-xs font-medium mb-5 border border-violet-400/20">Scholarly Output</div>
-      <h1 class="font-display text-5xl md:text-6xl font-bold text-white mb-4">Publications</h1>
-      <p class="text-white/40 text-lg max-w-2xl mx-auto">Selected research articles, book chapters, and conference contributions from the EEMC Lab.</p>
-
-      <!-- Filter pills -->
+  <section class="hero-bg pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <span class="inline-block px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-4">Scholarly Output</span>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-3">Publications</h1>
+      <p class="text-white/60 max-w-xl mx-auto text-sm">Selected research articles and book chapters from the EEMC Lab.</p>
       <div class="flex flex-wrap justify-center gap-2 mt-8" id="filters">
         <button class="filter-btn active" data-cat="all">All</button>
         <button class="filter-btn" data-cat="aop">Oxidation Processes</button>
-        <button class="filter-btn" data-cat="sensor">Electrochemical Sensors</button>
+        <button class="filter-btn" data-cat="sensor">Sensors</button>
         <button class="filter-btn" data-cat="photo">Photocatalysis</button>
         <button class="filter-btn" data-cat="nano">Nanomaterials</button>
       </div>
     </div>
+    <div class="relative mt-8">
+      <svg viewBox="0 0 1440 40" fill="none" preserveAspectRatio="none">
+        <path d="M0 40L1440 40L1440 0C1200 30 900 40 720 38C540 36 240 20 0 0L0 40Z" fill="#f4f7fb"/>
+      </svg>
+    </div>
   </section>
 
-  <!-- PUBLICATION METRICS -->
-  <section class="pb-12">
+  <!-- METRICS -->
+  <section class="py-12">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="glass-card rounded-2xl p-6 border border-white/5 text-center">
-          <div class="font-display text-3xl font-bold gradient-text">200+</div>
-          <div class="text-white/40 text-xs mt-1">Total Publications</div>
+      <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
+          <div class="font-display text-3xl font-bold text-[#1a3557]">200+</div>
+          <div class="text-[#64748b] text-xs mt-1">Total Publications</div>
         </div>
-        <div class="glass-card rounded-2xl p-6 border border-white/5 text-center">
-          <div class="font-display text-3xl font-bold text-teal-400">5000+</div>
-          <div class="text-white/40 text-xs mt-1">Total Citations</div>
+        <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
+          <div class="font-display text-3xl font-bold text-[#0d9488]">5000+</div>
+          <div class="text-[#64748b] text-xs mt-1">Total Citations</div>
         </div>
-        <div class="glass-card rounded-2xl p-6 border border-white/5 text-center">
-          <div class="font-display text-3xl font-bold text-violet-400">35+</div>
-          <div class="text-white/40 text-xs mt-1">h-index</div>
+        <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
+          <div class="font-display text-3xl font-bold text-[#2563eb]">35+</div>
+          <div class="text-[#64748b] text-xs mt-1">h-index</div>
         </div>
-        <div class="glass-card rounded-2xl p-6 border border-white/5 text-center">
-          <div class="font-display text-3xl font-bold text-emerald-400">15+</div>
-          <div class="text-white/40 text-xs mt-1">Book Chapters</div>
+        <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
+          <div class="font-display text-3xl font-bold text-violet-600">15+</div>
+          <div class="text-[#64748b] text-xs mt-1">Book Chapters</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PUBLICATIONS LIST -->
-  <section class="pb-32">
-    <div class="max-w-7xl mx-auto px-6">
-      <div id="pub-list" class="space-y-4">
+  <!-- PUBLICATIONS -->
+  <section class="pb-28">
+    <div class="max-w-5xl mx-auto px-6 space-y-10">
 
-        <!-- 2024 -->
-        <div class="reveal year-label">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="text-2xl font-display font-bold gradient-text">2024</div>
-            <div class="flex-1 h-px bg-white/5"></div>
-          </div>
+      <!-- 2024 -->
+      <div class="reveal">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="font-display text-xl font-bold text-[#1a3557]">2024</span>
+          <div class="flex-1 h-px bg-[#dde3ee]"></div>
         </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-300 p-6" data-cat="aop">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Bimetallic heterojunction nanocatalysts for Photo-Fenton-like degradation of emerging contaminants in aqueous systems</p>
+        <div class="space-y-3">
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="aop">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Bimetallic heterojunction nanocatalysts for Photo-Fenton-like degradation of emerging contaminants in aqueous systems</p>
                 <span class="tag flex-shrink-0">AOPs</span>
               </div>
-              <p class="text-white/40 text-xs mt-2">Lalruatkima Ralte, Diwakar Tiwari · <em>Journal of Hazardous Materials</em> · 2024</p>
-              <div class="flex items-center gap-4 mt-3">
-                <span class="text-white/30 text-xs">DOI: 10.1016/j.jhazmat.2024.xxxxx</span>
-              </div>
+              <p class="text-[#64748b] text-xs">Lalruatkima Ralte, Diwakar Tiwari · <em>Journal of Hazardous Materials</em> · 2024</p>
             </div>
           </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-teal-400/20 transition-all duration-300 p-6" data-cat="sensor" style="--delay:0.05s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-teal-400/10 border border-teal-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Carbon nanotube-polymer nanocomposites for simultaneous detection of heavy metals and pharmaceuticals</p>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="sensor">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Carbon nanotube-polymer nanocomposites for simultaneous detection of heavy metals and pharmaceuticals</p>
                 <span class="tag tag-teal flex-shrink-0">Sensors</span>
               </div>
-              <p class="text-white/40 text-xs mt-2">Hmingsangzuali, Diwakar Tiwari · <em>Sensors and Actuators B: Chemical</em> · 2024</p>
-              <div class="flex items-center gap-4 mt-3">
-                <span class="text-white/30 text-xs">DOI: 10.1016/j.snb.2024.xxxxx</span>
-              </div>
+              <p class="text-[#64748b] text-xs">Hmingsangzuali, Diwakar Tiwari · <em>Sensors and Actuators B: Chemical</em> · 2024</p>
             </div>
           </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-violet-400/20 transition-all duration-300 p-6" data-cat="photo" style="--delay:0.1s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Noble metal decorated WO₃/TiO₂ S-scheme heterojunction for photocatalytic pharmaceutical degradation under visible light</p>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="photo">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Noble metal decorated WO₃/TiO₂ S-scheme heterojunction for photocatalytic pharmaceutical degradation under visible light</p>
                 <span class="tag tag-violet flex-shrink-0">Photocatalysis</span>
               </div>
-              <p class="text-white/40 text-xs mt-2">Vanhmingliana, Diwakar Tiwari · <em>Applied Catalysis B: Environmental</em> · 2024</p>
-              <div class="flex items-center gap-4 mt-3">
-                <span class="text-white/30 text-xs">DOI: 10.1016/j.apcatb.2024.xxxxx</span>
-              </div>
+              <p class="text-[#64748b] text-xs">Vanhmingliana, Diwakar Tiwari · <em>Applied Catalysis B: Environmental</em> · 2024</p>
             </div>
           </div>
         </div>
-
-        <!-- 2023 -->
-        <div class="reveal year-label mt-10">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="text-2xl font-display font-bold text-white/50">2023</div>
-            <div class="flex-1 h-px bg-white/5"></div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-emerald-400/20 transition-all duration-300 p-6" data-cat="aop">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Graphene oxide supported bimetallic nanocatalysts for heterogeneous Photo-Fenton remediation of water micropollutants</p>
-                <span class="tag flex-shrink-0">AOPs</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">Barsha Rabha, Diwakar Tiwari · <em>Chemosphere</em> · 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-300 p-6" data-cat="nano" style="--delay:0.05s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Ionic liquid functionalized heterojunction nanocatalysts for enhanced micropollutant degradation via advanced oxidation processes</p>
-                <span class="tag flex-shrink-0">Nanomaterials</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">Laldintluangi Khiangte, Diwakar Tiwari · <em>Journal of Molecular Liquids</em> · 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-violet-400/20 transition-all duration-300 p-6" data-cat="photo" style="--delay:0.1s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.703.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">TiO₂/graphene oxide nanocomposite thin films for solar-driven photocatalytic water purification</p>
-                <span class="tag tag-violet flex-shrink-0">Photocatalysis</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">J. Malsawmsanga, Diwakar Tiwari · <em>Solar Energy Materials and Solar Cells</em> · 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2022 -->
-        <div class="reveal year-label mt-10">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="text-2xl font-display font-bold text-white/30">2022</div>
-            <div class="flex-1 h-px bg-white/5"></div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-teal-400/20 transition-all duration-300 p-6" data-cat="nano">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-teal-400/10 border border-teal-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Polymer-based composite nanofiltration membranes with TiO₂ and graphene oxide for micropollutant rejection</p>
-                <span class="tag tag-teal flex-shrink-0">Nanomaterials</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">Bichumo N. Lotha, Diwakar Tiwari · <em>Separation and Purification Technology</em> · 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-emerald-400/20 transition-all duration-300 p-6" data-cat="nano" style="--delay:0.05s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-emerald-400/10 border border-emerald-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Bimetallic MOFs for persulfate activation: efficient micropollutant elimination and mechanistic investigation</p>
-                <span class="tag tag-emerald flex-shrink-0">Nanomaterials</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">Thomas Hau Sian Muang, Diwakar Tiwari · <em>Chemical Engineering Journal</em> · 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal pub-item glass-card rounded-2xl border border-white/5 hover:border-cyan-400/20 transition-all duration-300 p-6" data-cat="photo" style="--delay:0.1s">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            </div>
-            <div class="flex-1">
-              <div class="flex items-start justify-between gap-4">
-                <p class="text-white text-sm font-medium leading-relaxed">Metal oxide incorporated carbon dots for photocatalytic removal of water-soluble polymer pollutants</p>
-                <span class="tag flex-shrink-0">Photocatalysis</span>
-              </div>
-              <p class="text-white/40 text-xs mt-2">Laltlansangi, Diwakar Tiwari · <em>Environmental Science & Technology</em> · 2022</p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="reveal text-center mt-12">
-        <p class="text-white/30 text-sm mb-4">For a complete list of publications, visit Google Scholar or ResearchGate.</p>
-        <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-sm border border-white/10 text-white/60 text-sm hover:text-cyan-400 hover:border-cyan-400/40 transition-all">
-          Contact for Full Publication List
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      <!-- 2023 -->
+      <div class="reveal">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="font-display text-xl font-bold text-[#64748b]">2023</span>
+          <div class="flex-1 h-px bg-[#dde3ee]"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="aop">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Graphene oxide supported bimetallic nanocatalysts for heterogeneous Photo-Fenton remediation of water micropollutants</p>
+                <span class="tag flex-shrink-0">AOPs</span>
+              </div>
+              <p class="text-[#64748b] text-xs">Barsha Rabha, Diwakar Tiwari · <em>Chemosphere</em> · 2023</p>
+            </div>
+          </div>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="nano">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Ionic liquid functionalized heterojunction nanocatalysts for enhanced micropollutant degradation via advanced oxidation processes</p>
+                <span class="tag flex-shrink-0">Nanomaterials</span>
+              </div>
+              <p class="text-[#64748b] text-xs">Laldintluangi Khiangte, Diwakar Tiwari · <em>Journal of Molecular Liquids</em> · 2023</p>
+            </div>
+          </div>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="photo">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">TiO₂/graphene oxide nanocomposite thin films for solar-driven photocatalytic water purification</p>
+                <span class="tag tag-violet flex-shrink-0">Photocatalysis</span>
+              </div>
+              <p class="text-[#64748b] text-xs">J. Malsawmsanga, Diwakar Tiwari · <em>Solar Energy Materials and Solar Cells</em> · 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="reveal">
+        <div class="flex items-center gap-4 mb-5">
+          <span class="font-display text-xl font-bold text-[#64748b]">2022</span>
+          <div class="flex-1 h-px bg-[#dde3ee]"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="nano">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Polymer-based composite nanofiltration membranes with TiO₂ and graphene oxide for micropollutant rejection</p>
+                <span class="tag flex-shrink-0">Nanomaterials</span>
+              </div>
+              <p class="text-[#64748b] text-xs">Bichumo N. Lotha, Diwakar Tiwari · <em>Separation and Purification Technology</em> · 2022</p>
+            </div>
+          </div>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="nano">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Bimetallic MOFs for persulfate activation: efficient micropollutant elimination and mechanistic investigation</p>
+                <span class="tag tag-teal flex-shrink-0">Nanomaterials</span>
+              </div>
+              <p class="text-[#64748b] text-xs">Thomas Hau Sian Muang, Diwakar Tiwari · <em>Chemical Engineering Journal</em> · 2022</p>
+            </div>
+          </div>
+          <div class="pub-item bg-white rounded-xl p-5 border border-[#dde3ee] hover:border-[#2563eb]/30 hover:shadow-sm transition-all" data-cat="photo">
+            <div class="pub-border">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <p class="text-[#1a2333] text-sm font-medium leading-relaxed">Metal oxide incorporated carbon dots for photocatalytic removal of water-soluble polymer pollutants</p>
+                <span class="tag tag-violet flex-shrink-0">Photocatalysis</span>
+              </div>
+              <p class="text-[#64748b] text-xs">Laltlansangi, Diwakar Tiwari · <em>Environmental Science &amp; Technology</em> · 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal text-center pt-4">
+        <p class="text-[#64748b] text-sm mb-4">For the complete publication list, visit Google Scholar or contact us directly.</p>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-[#dde3ee] text-[#1a3557] text-sm font-medium bg-white hover:bg-[#e8eef8] transition-colors">
+          Request Full List →
         </a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/5 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+  <footer class="bg-[#0f2340] text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-black font-bold text-xs">E</div>
-        <div>
-          <div class="text-white font-semibold text-sm">EEMC Lab</div>
-          <div class="text-white/30 text-xs">Mizoram University · Aizawl, India</div>
-        </div>
+        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center font-bold font-display text-sm">E</div>
+        <div><div class="font-display font-bold text-sm">EEMC Lab</div><div class="text-white/40 text-xs">Mizoram University · Aizawl, India</div></div>
       </div>
-      <div class="text-white/20 text-xs">© 2025 EEMC Lab. Mizoram University.</div>
+      <div class="text-white/30 text-xs">© 2025 EEMC Lab, Mizoram University.</div>
     </div>
   </footer>
 
   <style>
-    .filter-btn {
-      padding: 6px 16px;
-      border-radius: 9999px;
-      font-size: 12px;
-      font-weight: 500;
-      border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.4);
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .filter-btn:hover { border-color: rgba(0,212,255,0.3); color: rgba(0,212,255,0.8); }
-    .filter-btn.active { border-color: rgba(0,212,255,0.4); color: #00d4ff; background: rgba(0,212,255,0.08); }
-    .pub-item { transition: all 0.3s ease; }
+    .pub-item { transition: all 0.2s ease; }
     .pub-item.hidden-pub { display: none; }
-    .pub-item:hover { transform: translateX(4px); }
+    .pub-item:hover { transform: translateX(3px); }
   </style>
 
   <script type="module">
-    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
-
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Reveal
-    document.querySelectorAll('.reveal').forEach(el => {
-      inView(el, () => el.classList.add('visible'), { margin: "-60px" });
-    });
-
-    // Filter
+    import { inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+    document.querySelectorAll('.reveal').forEach(el => inView(el, () => el.classList.add('visible'), { margin: "-50px" }));
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const cat = btn.dataset.cat;
         document.querySelectorAll('.pub-item').forEach(item => {
-          if (cat === 'all' || item.dataset.cat === cat) {
-            item.classList.remove('hidden-pub');
-          } else {
-            item.classList.add('hidden-pub');
-          }
+          item.classList.toggle('hidden-pub', cat !== 'all' && item.dataset.cat !== cat);
         });
       });
     });

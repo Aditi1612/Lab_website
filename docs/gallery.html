@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — EEMC Lab · Mizoram University</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="bg-[#f4f7fb] text-[#1a2333]">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-3.5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-[#1a3557] flex items-center justify-center"><span class="text-white font-bold text-sm font-display">E</span></div>
+        <div><div class="font-display font-bold text-[#1a3557] text-base leading-none">EEMC Lab</div><div class="text-[10px] text-[#64748b]">Mizoram University</div></div>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html#research" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Research</a>
+        <a href="team.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Team</a>
+        <a href="gallery.html" class="text-sm font-medium text-[#2563eb] font-semibold">Gallery</a>
+        <a href="publications.html" class="text-sm font-medium text-[#64748b] hover:text-[#2563eb] transition-colors">Publications</a>
+        <a href="contact.html" class="px-4 py-2 rounded-lg bg-[#1a3557] text-white text-sm font-medium hover:bg-[#2563eb] transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <section class="hero-bg pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <span class="inline-block px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-4">Lab Life</span>
+      <h1 class="font-display text-4xl md:text-5xl font-bold text-white mb-3">Photo Gallery</h1>
+      <p class="text-white/60 max-w-xl mx-auto text-sm">A glimpse into the EEMC Lab — experiments, equipment, team moments, and research in action.</p>
+    </div>
+    <div class="relative mt-8">
+      <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40L1440 40L1440 0C1200 30 900 40 720 38C540 36 240 20 0 0L0 40Z" fill="#f4f7fb"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section class="pt-8 pb-4">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap gap-2 justify-center">
+      <button class="filter-btn active" data-cat="all">All Photos</button>
+      <button class="filter-btn" data-cat="lab">Laboratory</button>
+      <button class="filter-btn" data-cat="team">Team</button>
+      <button class="filter-btn" data-cat="equipment">Equipment</button>
+    </div>
+  </section>
+
+  <!-- GALLERY MASONRY -->
+  <section class="py-10 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item" data-cat="lab" data-index="0">
+          <img src="images/slide13_img11.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="1">
+          <img src="images/slide14_img12.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="2">
+          <img src="images/slide14_img13.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="3">
+          <img src="images/slide15_img14.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="4">
+          <img src="images/slide16_img15.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="5">
+          <img src="images/slide17_img16.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="6">
+          <img src="images/slide17_img17.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="7">
+          <img src="images/slide18_img18.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="8">
+          <img src="images/slide19_img19.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="9">
+          <img src="images/slide19_img20.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="10">
+          <img src="images/slide20_img21.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="11">
+          <img src="images/slide20_img22.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="12">
+          <img src="images/slide21_img23.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="13">
+          <img src="images/slide22_img24.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="14">
+          <img src="images/slide23_img25.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="15">
+          <img src="images/slide23_img26.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="16">
+          <img src="images/slide24_img27.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="17">
+          <img src="images/slide24_img28.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="18">
+          <img src="images/slide25_img29.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="19">
+          <img src="images/slide25_img30.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="20">
+          <img src="images/slide26_img31.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="21">
+          <img src="images/slide27_img32.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="22">
+          <img src="images/slide27_img33.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="23">
+          <img src="images/slide28_img34.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="24">
+          <img src="images/slide29_img35.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="25">
+          <img src="images/slide30_img36.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="26">
+          <img src="images/slide31_img37.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="27">
+          <img src="images/slide32_img38.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="28">
+          <img src="images/slide33_img39.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="29">
+          <img src="images/slide34_img40.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="30">
+          <img src="images/slide35_img41.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="equipment" data-index="31">
+          <img src="images/slide36_img42.jpg" alt="Equipment" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="32">
+          <img src="images/slide36_img43.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="33">
+          <img src="images/slide37_img44.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="34">
+          <img src="images/slide38_img45.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="35">
+          <img src="images/slide39_img46.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="36">
+          <img src="images/slide40_img47.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="team" data-index="37">
+          <img src="images/slide41_img48.jpg" alt="Team" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="38">
+          <img src="images/slide42_img49.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="39">
+          <img src="images/slide43_img50.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="40">
+          <img src="images/slide44_img51.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+        <div class="gallery-item" data-cat="lab" data-index="41">
+          <img src="images/slide45_img52.jpg" alt="Lab photo" loading="lazy"/>
+          <div class="gallery-overlay"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <div id="lb-close">✕</div>
+    <div id="lb-prev">&#8592;</div>
+    <img id="lb-img" src="" alt=""/>
+    <div id="lb-next">&#8594;</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f2340] text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center font-bold font-display text-sm">E</div>
+        <div><div class="font-display font-bold text-sm">EEMC Lab</div><div class="text-white/40 text-xs">Mizoram University · Aizawl, India</div></div>
+      </div>
+      <div class="text-white/30 text-xs">© 2025 EEMC Lab, Mizoram University.</div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
+
+    // Navbar
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+
+    // Lightbox
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    let current = 0;
+
+    function getVisibleItems() {
+      return items.filter(i => !i.classList.contains('hidden-item'));
+    }
+
+    function openLightbox(index) {
+      const visible = getVisibleItems();
+      current = index;
+      lbImg.src = visible[current].querySelector('img').src;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    items.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        const visible = getVisibleItems();
+        const visibleIndex = visible.indexOf(item);
+        openLightbox(visibleIndex >= 0 ? visibleIndex : 0);
+      });
+    });
+
+    document.getElementById('lb-close').addEventListener('click', () => {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    lb.addEventListener('click', (e) => {
+      if (e.target === lb) { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    });
+
+    document.getElementById('lb-prev').addEventListener('click', () => {
+      const visible = getVisibleItems();
+      current = (current - 1 + visible.length) % visible.length;
+      lbImg.src = visible[current].querySelector('img').src;
+    });
+    document.getElementById('lb-next').addEventListener('click', () => {
+      const visible = getVisibleItems();
+      current = (current + 1) % visible.length;
+      lbImg.src = visible[current].querySelector('img').src;
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowLeft')  document.getElementById('lb-prev').click();
+      if (e.key === 'ArrowRight') document.getElementById('lb-next').click();
+      if (e.key === 'Escape')     { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    });
+
+    // Filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        items.forEach(item => {
+          if (cat === 'all' || item.dataset.cat === cat) item.classList.remove('hidden-item');
+          else item.classList.add('hidden-item');
+        });
+      });
+    });
+
+    // Entrance animations
+    document.querySelectorAll('.gallery-item').forEach((el, i) => {
+      inView(el, () => {
+        animate(el, { opacity: [0, 1], y: [16, 0] }, { duration: 0.4, delay: (i % 6) * 0.05 });
+      }, { margin: '-40px' });
+    });
+  </script>
+
+  <style>
+    .gallery-item { opacity: 0; }
+    .hidden-item { display: none; }
+  </style>
+</body>
+</html>
