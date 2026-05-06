@@ -46,24 +46,31 @@
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="reveal mb-6"><span class="section-label">Principal Investigator</span></div>
-      <div class="reveal card overflow-hidden mb-4">
+
+      <!-- PI card: photo + bio -->
+      <div class="reveal card overflow-hidden mb-5">
         <div class="grid md:grid-cols-3">
           <!-- Photo side -->
-          <div class="bg-gradient-to-br from-[#e8eef8] to-[#f4f7fb] p-10 flex flex-col items-center justify-center border-r border-[#dde3ee]">
-            <div class="relative mb-5">
-              <img src="images/member_diwakar_tiwari.jpg" alt="Dr. Diwakar Tiwari" class="member-photo-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-              <div class="avatar-initials-lg bg-gradient-to-br from-[#1a3557] to-[#2563eb]" style="display:none">DT</div>
+          <div class="bg-gradient-to-br from-[#1a3557] to-[#2563eb] p-10 flex flex-col items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle at 60% 20%, #fff 1px, transparent 1px),radial-gradient(circle at 20% 80%, #fff 1px, transparent 1px); background-size:40px 40px;"></div>
+            <div class="relative mb-6 z-10">
+              <div class="w-48 h-48 rounded-full ring-4 ring-white/30 ring-offset-4 ring-offset-transparent overflow-hidden shadow-2xl">
+                <img src="images/member_diwakar_tiwari.jpg" alt="Dr. Diwakar Tiwari" class="w-full h-full object-cover object-top" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+                <div class="w-full h-full bg-gradient-to-br from-white/20 to-white/5 flex items-center justify-center text-white font-display font-bold text-4xl" style="display:none">DT</div>
+              </div>
             </div>
-            <div class="text-center">
-              <div class="font-display font-bold text-[#1a3557] text-lg">Dr. Diwakar Tiwari</div>
-              <div class="text-[#2563eb] text-sm mt-1">Principal Investigator</div>
-              <div class="text-[#64748b] text-xs mt-0.5">Senior Professor</div>
-              <div class="flex justify-center gap-2 mt-4">
-                <span class="tag tag-blue">PI</span>
-                <span class="tag tag-teal">DIA-COE Director</span>
+            <div class="text-center z-10">
+              <div class="font-display font-bold text-white text-xl">Dr. Diwakar Tiwari</div>
+              <div class="text-blue-200 text-sm mt-1">Principal Investigator</div>
+              <div class="text-white/60 text-xs mt-0.5">Senior Professor</div>
+              <div class="flex justify-center gap-2 mt-4 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-white/15 border border-white/25 text-white text-xs font-medium">PI</span>
+                <span class="px-2.5 py-1 rounded-full bg-white/15 border border-white/25 text-white text-xs font-medium">DIA-COE Director</span>
+                <span class="px-2.5 py-1 rounded-full bg-white/15 border border-white/25 text-white text-xs font-medium">IQAC Director</span>
               </div>
             </div>
           </div>
+
           <!-- Info side -->
           <div class="col-span-2 p-10">
             <h3 class="font-display text-xl font-bold text-[#1a3557] mb-1">About the Principal Investigator</h3>
@@ -79,7 +86,7 @@
                 <span class="tag">Wastewater Treatment</span>
               </div>
             </div>
-            <div class="grid sm:grid-cols-2 gap-3 mb-6">
+            <div class="grid sm:grid-cols-2 gap-3">
               <div class="bg-[#f4f7fb] rounded-xl p-3 border border-[#dde3ee]">
                 <div class="text-[#64748b] text-xs mb-0.5">Email</div>
                 <a href="mailto:diw_tiwari@yahoo.com" class="text-[#2563eb] text-sm hover:underline">diw_tiwari@yahoo.com</a>
@@ -97,45 +104,111 @@
                 <div class="text-[#1a2333] text-sm">Mizoram University, Aizawl-796004</div>
               </div>
             </div>
-            <!-- Awards & Distinctions -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Awards & Distinctions -->
+      <div class="reveal card p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div class="font-display font-bold text-[#1a3557] text-base">Awards &amp; Distinctions</div>
+            <div class="text-[#64748b] text-xs">Editorial roles, fellowships &amp; international recognitions</div>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-3">
+
+          <!-- Editorial -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-blue-50 border border-blue-100 hover:border-blue-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-[#2563eb] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+            </div>
             <div>
-              <div class="text-[#64748b] text-xs font-semibold uppercase tracking-wider mb-3">Awards &amp; Distinctions</div>
-              <div class="space-y-2">
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#2563eb] mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Editor-in-Chief</span> — <em>Science &amp; Technology Journal</em>, Mizoram University (UGC Approved)</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#0d9488] mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Associate Editor</span> — <em>Environmental Engineering Research</em> (Korean Society of Environmental Engineers) &amp; <em>Frontiers in Wastewater Management</em></p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-violet-500 mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Awarded by Chinese Academy of Sciences</span> as Visiting Researcher (2013)</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">STA Fellow</span> — Japan Science and Technology Corporation (1997–1998, 2000); worked at National Institute of Materials &amp; Chemical Research, Tsukuba, Japan</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#0d9488] mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Research Professor</span> — Dept of Environmental Engineering, Kwandong University, Korea (2005–2007)</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-[#2563eb] mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Visiting Professor</span> — Kwandong University, Korea (2007–2017, multiple terms)</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Invited Speaker</span> — 4th International Conference on Marine Biotechnology and Advanced Materials, Kangnung National University, Korea (2008)</p>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <div class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 flex-shrink-0"></div>
-                  <p class="text-[#64748b] text-xs leading-relaxed"><span class="font-medium text-[#1a2333]">Senior Research Fellow / Research Associate</span> — DOEn&amp;F, Govt. of India (1994–1996) &amp; CSIR, Govt. of India (1996–1997; 1999–2002)</p>
-                </div>
-              </div>
+              <div class="text-[#1a3557] text-xs font-semibold">Editor-in-Chief</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed"><em>Science &amp; Technology Journal</em>, Mizoram University · UGC Approved</div>
             </div>
           </div>
+
+          <!-- Associate Editor -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-teal-50 border border-teal-100 hover:border-teal-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-[#0d9488] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">Associate Editor</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed"><em>Environmental Engineering Research</em> · <em>Frontiers in Wastewater Management</em></div>
+            </div>
+          </div>
+
+          <!-- Chinese Academy -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-violet-50 border border-violet-100 hover:border-violet-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-violet-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">CAS Visiting Researcher</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">Chinese Academy of Sciences · 2013</div>
+            </div>
+          </div>
+
+          <!-- STA Fellow Japan -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-amber-50 border border-amber-100 hover:border-amber-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">STA Fellow — Japan</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">Japan Science &amp; Technology Corp. · 1997–98, 2000 · NIMC Research, Tsukuba</div>
+            </div>
+          </div>
+
+          <!-- Research Professor Korea -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-teal-50 border border-teal-100 hover:border-teal-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-[#0369a1] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">Research Professor — Korea</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">Dept of Environmental Engineering, Kwandong University · 2005–2007</div>
+            </div>
+          </div>
+
+          <!-- Visiting Professor Korea -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-blue-50 border border-blue-100 hover:border-blue-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-[#1a3557] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">Visiting Professor — Korea</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">Kwandong University, Korea · 2007–2017 (multiple terms)</div>
+            </div>
+          </div>
+
+          <!-- Invited Speaker -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-rose-50 border border-rose-100 hover:border-rose-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-rose-500 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">Invited Speaker</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">4th Int'l Conf. on Marine Biotechnology &amp; Advanced Materials, Kangnung National Univ., Korea · 2008</div>
+            </div>
+          </div>
+
+          <!-- Senior Research Fellow -->
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-amber-50 border border-amber-100 hover:border-amber-200 transition-colors">
+            <div class="w-9 h-9 rounded-lg bg-amber-600 flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <div>
+              <div class="text-[#1a3557] text-xs font-semibold">Senior Research Fellow / Research Associate</div>
+              <div class="text-[#64748b] text-[11px] mt-0.5 leading-relaxed">DOEnF, Govt. of India · 1994–1996 &amp; CSIR, Govt. of India · 1996–1997, 1999–2002</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
