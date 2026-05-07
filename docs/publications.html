@@ -62,11 +62,11 @@
           <div class="text-[#64748b] text-xs mt-1">Total Publications</div>
         </div>
         <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
-          <div class="font-display text-3xl font-bold text-[#0d9488]">5235</div>
+          <div id="pub-cit-all" class="font-display text-3xl font-bold text-[#0d9488]">5265</div>
           <div class="text-[#64748b] text-xs mt-1">Total Citations</div>
         </div>
         <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
-          <div class="font-display text-3xl font-bold text-[#2563eb]">42</div>
+          <div id="pub-h-all" class="font-display text-3xl font-bold text-[#2563eb]">42</div>
           <div class="text-[#64748b] text-xs mt-1">h-index</div>
         </div>
         <div class="card-flat p-6 rounded-2xl text-center bg-white border border-[#dde3ee]">
@@ -736,6 +736,15 @@
         });
       });
     });
+  </script>
+  <script>
+    fetch('data/scholar.json')
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById('pub-cit-all').textContent = d.citations_all.toLocaleString();
+        document.getElementById('pub-h-all').textContent   = d.h_index_all;
+      })
+      .catch(() => {});
   </script>
 </body>
 </html>
