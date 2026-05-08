@@ -8,6 +8,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 5      # Hard cap — never run longer than 5 minutes
     permissions:
       contents: write
 
@@ -19,8 +20,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install scholarly
-        run: pip install scholarly
+      - name: Install dependencies
+        run: pip install scholarly free-proxy
 
       - name: Fetch Scholar metrics
         run: python scripts/update_scholar.py
