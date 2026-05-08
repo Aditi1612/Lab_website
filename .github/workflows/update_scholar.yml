@@ -3,17 +3,23 @@ name: Update Google Scholar Metrics
 on:
   schedule:
     - cron: "0 6 * * *"   # Every day at 06:00 UTC
-  workflow_dispatch:        # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 5      # Hard cap — never run longer than 5 minutes
+    timeout-minutes: 8
     permissions:
       contents: write
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Start Tor
+        run: |
+          sudo apt-get install -y tor
+          sudo service tor start
+          sleep 10
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,7 +27,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install scholarly free-proxy
+        run: pip install scholarly stem requests[socks]
 
       - name: Fetch Scholar metrics
         run: python scripts/update_scholar.py

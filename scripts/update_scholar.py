@@ -3,65 +3,85 @@ import json
 import os
 import sys
 import signal
+import time
 from datetime import date
 
 SCHOLAR_ID = "vlPM4HMAAAAJ"
 OUTPUT = os.path.join(os.path.dirname(__file__), "..", "docs", "data", "scholar.json")
-TIMEOUT_SECS = 90
+MAX_RETRIES = 3
+TIMEOUT_SECS = 120
 
 
 def _on_timeout(signum, frame):
-    print("Timed out waiting for Google Scholar — keeping existing data.", file=sys.stderr)
-    sys.exit(0)
+    print("Hard timeout reached — Scholar did not respond.", file=sys.stderr)
+    sys.exit(1)
+
+
+def fetch_with_tor():
+    from scholarly import scholarly, ProxyGenerator
+    pg = ProxyGenerator()
+    pg.Tor_Internal(tor_sock_port=9050)
+    scholarly.use_proxy(pg)
+    print("Proxy: Tor")
+    return scholarly
+
+
+def fetch_with_free_proxy():
+    from scholarly import scholarly, ProxyGenerator
+    pg = ProxyGenerator()
+    pg.FreeProxies()
+    scholarly.use_proxy(pg)
+    print("Proxy: FreeProxies")
+    return scholarly
+
+
+def fetch_direct():
+    from scholarly import scholarly
+    print("Proxy: none (direct)")
+    return scholarly
+
+
+def get_author(scholarly_obj):
+    author = scholarly_obj.fill(scholarly_obj.search_author_id(SCHOLAR_ID))
+    return {
+        "citations_all":   author.get("citedby", 0),
+        "citations_since": author.get("citedby5y", 0),
+        "h_index_all":     author.get("hindex", 0),
+        "h_index_since":   author.get("hindex5y", 0),
+        "i10_all":         author.get("i10index", 0),
+        "i10_since":       author.get("i10index5y", 0),
+        "last_updated":    str(date.today()),
+    }
 
 
 def main():
-    try:
-        from scholarly import scholarly, ProxyGenerator
-    except ImportError:
-        print("scholarly not installed", file=sys.stderr)
-        sys.exit(1)
-
-    # Hard 90-second ceiling so the job never hangs for minutes
     signal.signal(signal.SIGALRM, _on_timeout)
     signal.alarm(TIMEOUT_SECS)
 
-    try:
-        # Route through a free proxy to reduce bot-detection blocks
-        pg = ProxyGenerator()
+    strategies = [fetch_with_tor, fetch_with_free_proxy, fetch_direct]
+
+    for attempt, strategy in enumerate(strategies, 1):
         try:
-            if pg.FreeProxies():
-                scholarly.use_proxy(pg)
-                print("Using free proxy.")
-        except Exception:
-            print("Could not set up proxy — trying direct.", file=sys.stderr)
+            print(f"\nAttempt {attempt}/{len(strategies)}: {strategy.__name__}")
+            s = strategy()
+            data = get_author(s)
+            signal.alarm(0)
 
-        print(f"Fetching Scholar profile for {SCHOLAR_ID} …")
-        author = scholarly.fill(scholarly.search_author_id(SCHOLAR_ID))
-        signal.alarm(0)  # cancel timeout on success
+            os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
+            with open(OUTPUT, "w") as f:
+                json.dump(data, f, indent=2)
+                f.write("\n")
 
-        data = {
-            "citations_all":   author.get("citedby", 0),
-            "citations_since": author.get("citedby5y", 0),
-            "h_index_all":     author.get("hindex", 0),
-            "h_index_since":   author.get("hindex5y", 0),
-            "i10_all":         author.get("i10index", 0),
-            "i10_since":       author.get("i10index5y", 0),
-            "last_updated":    str(date.today()),
-        }
+            print("Saved:", data)
+            return
 
-        os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
-        with open(OUTPUT, "w") as f:
-            json.dump(data, f, indent=2)
-            f.write("\n")
+        except Exception as exc:
+            print(f"  Failed: {exc}", file=sys.stderr)
+            if attempt < len(strategies):
+                time.sleep(5)
 
-        print("Saved:", data)
-
-    except Exception as exc:
-        signal.alarm(0)
-        print(f"Scholar fetch failed: {exc}", file=sys.stderr)
-        print("Keeping existing data.", file=sys.stderr)
-        sys.exit(0)  # don't mark the workflow as failed
+    print("All strategies failed.", file=sys.stderr)
+    sys.exit(1)
 
 
 if __name__ == "__main__":
