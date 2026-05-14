@@ -27,7 +27,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install scholarly stem requests[socks]
+        run: pip install requests[socks]
 
       - name: Fetch Scholar metrics
         run: python scripts/update_scholar.py
